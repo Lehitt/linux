@@ -22,7 +22,35 @@ def home():
     cursor.close()
     conn.close()
 
-    return f"<h1>{result[0]}</h1><h2>{current_time[0]}</h2>"
 
+
+    return f"""
+        <html>
+    <head>
+        <style>
+            body {{
+                background-color: #7F00FF;  
+                color: #000000;             
+                font-family: Arial, sans-serif;
+                text-align: center;
+                padding-top: 50px;
+            }}
+            h1 {{
+                color: #000000;  
+            }}
+            p {{
+                color: #000000;  
+            }}
+        </style>
+    </head>
+    <body>
+  
+    
+    <h1>{result[0]}</h1>
+    <h2>{current_time[0]}</h2>
+ </head>
+    <body>
+
+"""
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
