@@ -16,10 +16,13 @@ def home():
     cursor.execute("SELECT 'Hello from MySQL!'")
     result = cursor.fetchone()
 
+    cursor.execute("SELECT NOW()")
+    current_time = cursor.fetchone()
+
     cursor.close()
     conn.close()
 
-    return f"<h1>{result[0]}</h1>"
+    return f"<h1>{result[0]}</h1><h2>{current_time[0]}</h2>"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
