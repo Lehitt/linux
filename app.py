@@ -48,9 +48,9 @@ def home():
     
     <h1>{result[0]}</h1>
     <h2>{current_time[0]}</h2>
- </head>
-    <body>
+    </body>
+    </html>
 
-"""
+    """
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
